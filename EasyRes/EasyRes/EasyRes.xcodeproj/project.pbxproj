@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F2DA44428177E29005E7394 /* EasyResApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA44328177E29005E7394 /* EasyResApp.swift */; };
+		3F2DA44628177E29005E7394 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2DA44528177E29005E7394 /* ContentView.swift */; };
+		3F2DA44828177E2E005E7394 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA44728177E2E005E7394 /* Assets.xcassets */; };
+		3F2DA44B28177E2E005E7394 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA44A28177E2E005E7394 /* Preview Assets.xcassets */; };
+		3F2DA45F28178A75005E7394 /* Arimo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45328178A75005E7394 /* Arimo-Bold.ttf */; };
+		3F2DA46028178A75005E7394 /* Arimo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45428178A75005E7394 /* Arimo-Italic.ttf */; };
+		3F2DA46128178A75005E7394 /* Arimo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45528178A75005E7394 /* Arimo-Regular.ttf */; };
+		3F2DA46228178A75005E7394 /* Arimo-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45628178A75005E7394 /* Arimo-SemiBoldItalic.ttf */; };
+		3F2DA46328178A75005E7394 /* Arimo-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45728178A75005E7394 /* Arimo-MediumItalic.ttf */; };
+		3F2DA46428178A75005E7394 /* Arimo-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45828178A75005E7394 /* Arimo-BoldItalic.ttf */; };
+		3F2DA46528178A75005E7394 /* Arimo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45928178A75005E7394 /* Arimo-Medium.ttf */; };
+		3F2DA46628178A75005E7394 /* Arimo-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45A28178A75005E7394 /* Arimo-SemiBold.ttf */; };
+		3F2DA46728178A75005E7394 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45B28178A75005E7394 /* README.txt */; };
+		3F2DA46828178A75005E7394 /* Arimo-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45C28178A75005E7394 /* Arimo-Italic-VariableFont_wght.ttf */; };
+		3F2DA46928178A75005E7394 /* LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45D28178A75005E7394 /* LICENSE.txt */; };
+		3F2DA46A28178A75005E7394 /* Arimo-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F2DA45E28178A75005E7394 /* Arimo-VariableFont_wght.ttf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F2DA44028177E29005E7394 /* EasyRes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EasyRes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F2DA44328177E29005E7394 /* EasyResApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EasyResApp.swift; sourceTree = "<group>"; };
+		3F2DA44528177E29005E7394 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		3F2DA44728177E2E005E7394 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F2DA44A28177E2E005E7394 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3F2DA45328178A75005E7394 /* Arimo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Bold.ttf"; sourceTree = "<group>"; };
+		3F2DA45428178A75005E7394 /* Arimo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Italic.ttf"; sourceTree = "<group>"; };
+		3F2DA45528178A75005E7394 /* Arimo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Regular.ttf"; sourceTree = "<group>"; };
+		3F2DA45628178A75005E7394 /* Arimo-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		3F2DA45728178A75005E7394 /* Arimo-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-MediumItalic.ttf"; sourceTree = "<group>"; };
+		3F2DA45828178A75005E7394 /* Arimo-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-BoldItalic.ttf"; sourceTree = "<group>"; };
+		3F2DA45928178A75005E7394 /* Arimo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Medium.ttf"; sourceTree = "<group>"; };
+		3F2DA45A28178A75005E7394 /* Arimo-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-SemiBold.ttf"; sourceTree = "<group>"; };
+		3F2DA45B28178A75005E7394 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		3F2DA45C28178A75005E7394 /* Arimo-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		3F2DA45D28178A75005E7394 /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
+		3F2DA45E28178A75005E7394 /* Arimo-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arimo-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		3F2DA46B28178AE3005E7394 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F2DA43D28177E29005E7394 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F2DA43728177E29005E7394 = {
+			isa = PBXGroup;
+			children = (
+				3F2DA44228177E29005E7394 /* EasyRes */,
+				3F2DA44128177E29005E7394 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F2DA44128177E29005E7394 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F2DA44028177E29005E7394 /* EasyRes.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F2DA44228177E29005E7394 /* EasyRes */ = {
+			isa = PBXGroup;
+			children = (
+				3F2DA45328178A75005E7394 /* Arimo-Bold.ttf */,
+				3F2DA45428178A75005E7394 /* Arimo-Italic.ttf */,
+				3F2DA45528178A75005E7394 /* Arimo-Regular.ttf */,
+				3F2DA45628178A75005E7394 /* Arimo-SemiBoldItalic.ttf */,
+				3F2DA45728178A75005E7394 /* Arimo-MediumItalic.ttf */,
+				3F2DA45828178A75005E7394 /* Arimo-BoldItalic.ttf */,
+				3F2DA45928178A75005E7394 /* Arimo-Medium.ttf */,
+				3F2DA45A28178A75005E7394 /* Arimo-SemiBold.ttf */,
+				3F2DA46B28178AE3005E7394 /* Info.plist */,
+				3F2DA44328177E29005E7394 /* EasyResApp.swift */,
+				3F2DA44528177E29005E7394 /* ContentView.swift */,
+				3F2DA45128178A75005E7394 /* Arimo */,
+				3F2DA44728177E2E005E7394 /* Assets.xcassets */,
+				3F2DA44928177E2E005E7394 /* Preview Content */,
+			);
+			path = EasyRes;
+			sourceTree = "<group>";
+		};
+		3F2DA44928177E2E005E7394 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3F2DA44A28177E2E005E7394 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3F2DA45128178A75005E7394 /* Arimo */ = {
+			isa = PBXGroup;
+			children = (
+				3F2DA45228178A75005E7394 /* static */,
+				3F2DA45B28178A75005E7394 /* README.txt */,
+				3F2DA45C28178A75005E7394 /* Arimo-Italic-VariableFont_wght.ttf */,
+				3F2DA45D28178A75005E7394 /* LICENSE.txt */,
+				3F2DA45E28178A75005E7394 /* Arimo-VariableFont_wght.ttf */,
+			);
+			path = Arimo;
+			sourceTree = "<group>";
+		};
+		3F2DA45228178A75005E7394 /* static */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = static;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F2DA43F28177E29005E7394 /* EasyRes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F2DA44E28177E2E005E7394 /* Build configuration list for PBXNativeTarget "EasyRes" */;
+			buildPhases = (
+				3F2DA43C28177E29005E7394 /* Sources */,
+				3F2DA43D28177E29005E7394 /* Frameworks */,
+				3F2DA43E28177E29005E7394 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EasyRes;
+			productName = EasyRes;
+			productReference = 3F2DA44028177E29005E7394 /* EasyRes.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F2DA43828177E29005E7394 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					3F2DA43F28177E29005E7394 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 3F2DA43B28177E29005E7394 /* Build configuration list for PBXProject "EasyRes" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F2DA43728177E29005E7394;
+			productRefGroup = 3F2DA44128177E29005E7394 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F2DA43F28177E29005E7394 /* EasyRes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F2DA43E28177E29005E7394 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2DA46628178A75005E7394 /* Arimo-SemiBold.ttf in Resources */,
+				3F2DA46328178A75005E7394 /* Arimo-MediumItalic.ttf in Resources */,
+				3F2DA46728178A75005E7394 /* README.txt in Resources */,
+				3F2DA46228178A75005E7394 /* Arimo-SemiBoldItalic.ttf in Resources */,
+				3F2DA46828178A75005E7394 /* Arimo-Italic-VariableFont_wght.ttf in Resources */,
+				3F2DA46928178A75005E7394 /* LICENSE.txt in Resources */,
+				3F2DA46128178A75005E7394 /* Arimo-Regular.ttf in Resources */,
+				3F2DA44B28177E2E005E7394 /* Preview Assets.xcassets in Resources */,
+				3F2DA46428178A75005E7394 /* Arimo-BoldItalic.ttf in Resources */,
+				3F2DA45F28178A75005E7394 /* Arimo-Bold.ttf in Resources */,
+				3F2DA46A28178A75005E7394 /* Arimo-VariableFont_wght.ttf in Resources */,
+				3F2DA44828177E2E005E7394 /* Assets.xcassets in Resources */,
+				3F2DA46028178A75005E7394 /* Arimo-Italic.ttf in Resources */,
+				3F2DA46528178A75005E7394 /* Arimo-Medium.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F2DA43C28177E29005E7394 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2DA44628177E29005E7394 /* ContentView.swift in Sources */,
+				3F2DA44428177E29005E7394 /* EasyResApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3F2DA44C28177E2E005E7394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		3F2DA44D28177E2E005E7394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F2DA44F28177E2E005E7394 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyRes/Preview Content\"";
+				DEVELOPMENT_TEAM = 48ZAHBU554;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyRes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jane.EasyRes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F2DA45028177E2E005E7394 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"EasyRes/Preview Content\"";
+				DEVELOPMENT_TEAM = 48ZAHBU554;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EasyRes/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Jane.EasyRes;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F2DA43B28177E29005E7394 /* Build configuration list for PBXProject "EasyRes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F2DA44C28177E2E005E7394 /* Debug */,
+				3F2DA44D28177E2E005E7394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F2DA44E28177E2E005E7394 /* Build configuration list for PBXNativeTarget "EasyRes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F2DA44F28177E2E005E7394 /* Debug */,
+				3F2DA45028177E2E005E7394 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F2DA43828177E29005E7394 /* Project object */;
+}
