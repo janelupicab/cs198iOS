@@ -4,8 +4,8 @@
 //
 //  Created by Jane on 4/25/22.
 //
-
 import SwiftUI
+import UIKit
 
 class myInfo: ObservableObject{
     //this class is used to transfer the user's input so that it can be used across views (aka the resume views)
@@ -26,6 +26,7 @@ class myInfo: ObservableObject{
     @Published var gpa: String = ""
     @Published var clubs: String = ""
     @Published var awards: String = ""
+    @Published var major: String = ""
 
     //work experience 1 variables
     @Published var e1title: String = ""
@@ -92,21 +93,14 @@ class myInfo: ObservableObject{
     @Published var course4: String = ""
     @Published var course5: String = ""
     
+    //description
+    @Published var description: String = ""
    
 }
 
 
 
 struct ContentView: View {
-    //basic information variables
-        @State var temp1: String = ""
-        @State var temp2: String = ""
-        @State var temp3: String = ""
-        @State var temp4: String = ""
-        @State var temp5: String = ""
-        @State var temp6: String = ""
-        @State var temp7: String = ""
-        @State var temp8: String = ""
 
     
     @StateObject var me = myInfo()
@@ -124,11 +118,17 @@ struct ContentView: View {
                 // ///////////////// ///
                 //TEMPLATES TAB VIEW //
                 // ///////////////////
-
                 //****TODO: make it look a bit nicer if we want
                 VStack{
-                    Text("Resume Templates").font(.custom("Arimo-Bold", size: 30))
-                        .padding(.bottom, 40)
+                    ZStack{
+                        Image("background")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                        Text("Templates").font(.custom("Arimo-Bold", size: 30))
+                            .padding(.bottom, 10)
+                            .foregroundColor(.white)
+                            
+                    }
                     HStack{ //templates 1 and 2
                         
                         //Template 1
@@ -141,7 +141,7 @@ struct ContentView: View {
                                     Text("Bold Resume")
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
-                        }.padding(25)
+                        }.padding(20)
                         
                         //Template 2
                         NavigationLink(destination: JeffreyView().environmentObject(self.me)) {
@@ -153,7 +153,7 @@ struct ContentView: View {
                                     Text ("Project Resume")
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
-                        }.padding(25)
+                        }.padding(20)
                     }
                    
                     HStack{ // templates 3 & 4
@@ -168,7 +168,7 @@ struct ContentView: View {
                                     Text ("Detailed Resume")
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
-                        }.padding(25)
+                        }.padding(20)
                         
                         //Template 4
                         NavigationLink(destination: VivianView().environmentObject(self.me)) {
@@ -181,7 +181,7 @@ struct ContentView: View {
                                     Text ("Technical Resume")
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
-                        }.padding(25)
+                        }.padding(20)
                     }
                 } .tabItem{
                     Image(systemName: "house.fill")
@@ -318,14 +318,10 @@ struct ContentView: View {
     } // end var: body
 } // end content view
 
-
-
 //NAVIGATION VIEWS BELOW FOR EACH TEMPLATE:
-
 // //////////////////////
 //Jane Template View ////
 // //////////////////////
-
 struct JaneView: View {
     @EnvironmentObject var me: myInfo
     var body: some View {
@@ -333,7 +329,6 @@ struct JaneView: View {
         Text("\(me.skill1)")
         Text("\(me.p1title)")
         //**** TODO: create template view
-
     }
 }
 
@@ -345,10 +340,206 @@ struct JeffreyView: View {
     @EnvironmentObject var me: myInfo
     
     var body: some View {
-        Text("JEFFREY!")
-        //**** TODO: create template view
-        // use me.<variable name> from the variables above in class myInfo to capture what the user put in profile
+        VStack {
+            Group {
+                HStack {
+                    Spacer()
+                    
+                    Text(" \(me.name) ")
+                        .bold()
+                        .font(.title)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        HStack {
+                            Text(" \(me.phone)  ")
+                                .font(.caption)
+                        }
+                        
+                        Text(" \(me.email)  ")
+                            .font(.caption)
+                    }
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text("  EDUCATION ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       \(me.school) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       Relevant Coursework: \(me.course1), \(me.course2), \(me.course3)")
+                    Spacer()
+                }
+            }
+            
+            Spacer()
+            
+            Group {
+                HStack {
+                    Text("  EXPERIENCE ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                
+                HStack {
+                    Text("      \(me.e1title) ")
+                        .bold()
+                    Spacer()
+                    Text(" \(me.e1company)    ")
+                        .bold()
+                }
+                
+                HStack {
+                    Text("      From \(me.e1start) - \(me.e1end)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e1detail1) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e1detail2) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e1detail3) ")
+                    Spacer()
+                }
+            }
+            
+            Group {
+                HStack {
+                    Text("      \(me.e2title) ")
+                        .bold()
+                    Spacer()
+                    Text(" \(me.e2company)    ")
+                        .bold()
+                }
+                
+                HStack {
+                    Text("      From \(me.e2start) - \(me.e2end)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e2detail1) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e2detail2) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          -  \(me.e2detail3) ")
+                    Spacer()
+                }
+            }
+            
+            Spacer()
+            
+            HStack {
+                Text("  PROJECTS ")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
+            
+            
+            Group {
+                HStack {
+                    Text("      \(me.p1name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("      \(me.p1title) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail3) ")
+                    Spacer()
+                }
+            }
+            
+            Group {
+                HStack {
+                    Text("      \(me.p2name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("      \(me.p2title) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail3) ")
+                    Spacer()
+                }
+            }
+            Spacer()
+        }
+    }
+    
+//    var body: some View {
+//
+//        VStack {
+//            realView
+//            Button("Save to image") {
+//                let image = realView.snapshot()
+//                UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+//            }
+//        }
+//    }
+}
+extension View {
+    func snapshot() -> UIImage {
+        let controller = UIHostingController(rootView: self)
+        let view = controller.view
 
+        let targetSize = controller.view.intrinsicContentSize
+        view?.bounds = CGRect(origin: .zero, size: targetSize)
+        view?.backgroundColor = .clear
+
+        let renderer = UIGraphicsImageRenderer(size: targetSize)
+
+        return renderer.image { _ in
+            view?.drawHierarchy(in: controller.view.bounds, afterScreenUpdates: true)
+        }
     }
 }
 
@@ -358,13 +549,155 @@ struct JeffreyView: View {
 // //////////////////////
 struct VibhaView: View {
     @EnvironmentObject var me: myInfo
-    
     var body: some View {
-        Text("VIBHA!")
-        //**** TODO: create template view
-        // use me.<variable name> from the variables above in class myInfo to capture what the user put in profile
+        VStack {
+            Group {
+                HStack {
+                    Spacer()
+                    
+                    Text(" \(me.name) ")
+                        .bold()
+                        .font(.title)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        HStack {
+                            Text(" \(me.phone)  ")
+                                .font(.caption)
+                        }
+                        
+                        Text(" \(me.email)  ")
+                            .font(.caption)
+                        
+                        Text(" \(me.linkedIn) ")
+                            .font(.caption)
+                    }
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text("  Education ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       \(me.school) | \(me.startSchool) - \(me.endSchool ) | GPA: \(me.gpa)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       Major: \(me.major)")
+                    Spacer()
+                }
+            }
+            
+            Spacer()
+            
+            Group {
+                HStack {
+                    Text("  Experience ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                
+                HStack {
+                    Text("      \(me.e2title)   |   \(me.e2company)")
+                        .bold()
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("      \(me.e2start) - \(me.e2end)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          •  \(me.e2detail1) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          •  \(me.e2detail2) ")
+                    Spacer()
+                }
+            
+            }
+            
+            Spacer()
+            
+            HStack {
+                Text("  Projects ")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
+            
+            
+            Group {
+                HStack {
+                    Text("      \(me.p1name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  Link: \(me.p1detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  \(me.p1detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  \(me.p1detail3) ")
+                    Spacer()
+                }
 
+            }
+            
+            Group {
+                HStack {
+                    Text("      \(me.p2name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  Link: \(me.p2detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  \(me.p2detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          •  \(me.p2detail3) ")
+                    Spacer()
+                }
+            }
+            Spacer()
+        }
+        
+        Group {
+            HStack {
+                Text("  Skills ")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
+            HStack {
+                Text("  \(me.skill1) | \(me.skill2) | \(me.skill3) | \(me.skill4) | \(me.skill4)")
+                Spacer()
+            }
+        }
     }
+    
 }
 
 
@@ -373,30 +706,254 @@ struct VibhaView: View {
 // //////////////////////
 struct VivianView: View {
     @EnvironmentObject var me: myInfo
+    
+    //private let items: [String] = ["A", "B"]
+    //private let columnCount: Int  = 3
+    
+    //let theWords = ["EDUCATION", "ABOUT ME"]
+        
+    //let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    /*private var twoColumnGrid = [GridItem] = Array(repeating: .init(.flexible()), count: 2)
+    
+    ScrollView {
+        LazyVGrid(columns: twoColumnGrid) {
+            // Display the item
+        }
+    }*/
 
     var body: some View {
-        Text("VIVIAN!")
+        Text(" \(me.name) ")
+            .bold()
+            .font(.title)
         //**** TODO: create template view
         // use me.<variable name> from the variables above in class myInfo to capture what the user put in profile
+        //ScrollView(.vertical) {
+            
+            
+            /*let count = self.items.count
+            let rowCount = (Double(count) / Double(self.columnCount)).rounded(.up)
+            ForEach(0...<Int(rowCount)) { row in
+                Spacer(minLength: 0)
+                HStack(spacing: 8) {
+                    ForEach(0...<self.columnCount) { column in
+                        let index = row * columnCount + column
+                        if index < count {
+                            Text(self.items[index]).frame(maxWidth: .infinity)
+                        } else {
+                            Spacer().frame(maxWidth: .infinity)
+                        }
+                    }
+                }
+            }
+        } .frame(maxWidth: .infinity)*/
+            
+        /*LazyVGrid(columns: columns) {
+            ForEach(theWords, id: \.self) { word in
+                Text(word)
+            }
+        }*/
+        
+        /*var lineView = UIView(frame: CGRect(x: 0, y: 100, width: 320, height: 1.0))
+        lineView.layer.borderWidth = 1.0
+        lineView.layer.borderColor = UIColor.black.cgColor
+        myInfo.addSubview(lineView)*/
+        
+        /*let line = UIView()
+        view.addSubview(line)
+        line.translatesAutoresizingMaskIntoConstraints = false
+        line.widthAnchor.constraint(equalToConstant: view.bounds.width - 40).isActive = true
+        line.heightAnchor.constraint(equalToConstant: 1).isActive = true
+        line.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 20).isActive = true
+        line.topAnchor.constraint(equalTo: userName.bottomAnchor,constant: 20).isActive = true
+        line.backgroundColor = .gray*/
+        
+        /*UIView * separator = [[UIView alloc] initWithFrame:CGRectMake(x, y, 320, 1)];
+        separator.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1];
+        [self.view addSubview:separator];
+        [separator release];*/
+            
+        
+       
+        
+        VStack {
+            Divider().background(Color.black).frame(width: 350)
+        }
+        
+        HStack {
+            Text("  ABOUT ME ")
+                .bold()
+                .font(.title2)
+            Spacer()
+        }
+        
+        VStack {
+            Group {
+                HStack {
+                    Spacer()
+                    
+                    Text(" \(me.linkedIn) ")
+                        .bold()
+                        .font(.title)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        HStack {
+                            Text(" \(me.email)  ")
+                                .font(.caption)
+                        }
+                        
+                        Text(" \(me.website)  ")
+                            .font(.caption)
+                    }
+                    
+                    Spacer()
+                }
+                
+                Spacer()
+                
+                HStack {
+                    Text("  EDUCATION ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       \(me.school) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       Expected Graduation: \(me.startSchool), \(me.endSchool)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       Major: \(me.major)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       GPA: \(me.gpa)")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("       Extracurriculars/Awards: \(me.clubs), \(me.awards)")
+                    Spacer()
+                }
+            }
+            
+            Spacer()
+            
+            Group {
+                HStack {
+                    Text("  SKILLS ")
+                        .bold()
+                        .font(.title2)
+                    Spacer()
+                }
+                
+                
+                HStack {
+                    Text("          •  \(me.skill1) ")
+                        .bold()
+                    Spacer()
+         
+                }
+                
 
+                
+                HStack {
+                    Text("          •  \(me.skill2) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          •  \(me.skill3) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          •  \(me.skill4) ")
+                    Spacer()
+                }
+                
+                HStack {
+                    Text("          •  \(me.skill5) ")
+                    Spacer()
+                }
+            }
+            
+            
+            Spacer()
+            
+            HStack {
+                Text("  PROJECTS ")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
+            
+            
+            Group {
+                HStack {
+                    Text("      \(me.p1name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("      \(me.p1title) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p1detail3) ")
+                    Spacer()
+                }
+            }
+            
+        
+            HStack {
+                Text("  WORK EXPERIENCE ")
+                    .bold()
+                    .font(.title2)
+                Spacer()
+            }
+            
+            Group {
+                HStack {
+                    Text("      \(me.p2name) ")
+                        .bold()
+                    Spacer()
+                }
+                HStack {
+                    Text("      \(me.p2title) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail1) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail2) ")
+                    Spacer()
+                }
+                HStack {
+                    Text("          -  \(me.p2detail3) ")
+                    Spacer()
+                }
+            }
+        }
+        
+        Spacer()
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-//PREVIEW CODE:
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
