@@ -132,18 +132,6 @@ struct ContentView: View {
                     HStack{ //templates 1 and 2
                         
                         //Template 1
-                        NavigationLink(destination: JaneView().environmentObject(self.me)) {
-                            VStack{
-                                Image("jane")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: 119, height: 154)
-                                    Text("Bold Resume")
-                                        .font(.custom("Arimo-Regular", size: 16))
-                                }
-                        }.padding(20)
-                        
-                        //Template 2
                         NavigationLink(destination: JeffreyView().environmentObject(self.me)) {
                             VStack{
                                 Image("jeffrey")
@@ -154,11 +142,8 @@ struct ContentView: View {
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
                         }.padding(20)
-                    }
-                   
-                    HStack{ // templates 3 & 4
                         
-                        //Template 3
+                        //Template 2
                         NavigationLink(destination: VibhaView().environmentObject(self.me)) {
                             VStack{
                                 Image("vibha")
@@ -169,9 +154,12 @@ struct ContentView: View {
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
                         }.padding(20)
+                    }
+                   
+                    HStack{ // templates 3 & 4
                         
-                        //Template 4
-                        NavigationLink(destination: VivianView().environmentObject(self.me)) {
+                        //Template 3
+                      NavigationLink(destination: VivianView().environmentObject(self.me)) {
                             VStack{
                                 Image("vivian")
                                     .resizable()
@@ -179,6 +167,19 @@ struct ContentView: View {
                                     .frame(width: 119, height: 154)
                                 
                                     Text ("Technical Resume")
+                                        .font(.custom("Arimo-Regular", size: 16))
+                                }
+                        }.padding(20)
+                        
+                        //Template 4
+                        
+                        NavigationLink(destination: JaneView().environmentObject(self.me)) {
+                            VStack{
+                                Image("jane")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: 119, height: 154)
+                                    Text(" ")
                                         .font(.custom("Arimo-Regular", size: 16))
                                 }
                         }.padding(20)
@@ -325,10 +326,7 @@ struct ContentView: View {
 struct JaneView: View {
     @EnvironmentObject var me: myInfo
     var body: some View {
-        Text("JANE! \(me.name) \(me.location)\(me.email)\(me.phone)\(me.linkedIn)")
-        Text("\(me.skill1)")
-        Text("\(me.p1title)")
-        //**** TODO: create template view
+        Text("More Resume Templates Coming Soon!")
     }
 }
 
